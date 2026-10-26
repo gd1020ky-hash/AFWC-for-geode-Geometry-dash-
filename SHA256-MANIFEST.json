@@ -1,0 +1,58 @@
+{
+  ".github/workflows/build.yml": {
+    "bytes": 1531,
+    "sha256": "14323767f2837a08ac174650b4c63f27e7ef38936d812a8fc50ee16382694f08"
+  },
+  "CMakeLists.txt": {
+    "bytes": 562,
+    "sha256": "82d3f335eb4edac29cfb5d7b722de8ae8511402f28030ef43bd4bb532fa95112"
+  },
+  "ForgeCore.hpp": {
+    "bytes": 7912,
+    "sha256": "25f473f2e9b9ee18e417144c3061af2acd8f7b130a5ad48ce2a93b5486e87b35"
+  },
+  "LICENSE": {
+    "bytes": 1081,
+    "sha256": "096d8544a1c2c3caa5683de8d7f978376dbdd33ac5fbc2fbd878da6110fce249"
+  },
+  "README.md": {
+    "bytes": 14636,
+    "sha256": "45c68deb6518d51780535fb468427056f95e4ae26c93c35132a722c5dd4129f1"
+  },
+  "VALIDATION.md": {
+    "bytes": 2974,
+    "sha256": "e33f6ae98dc99b284b48eba350796825050bf67de6f35aa616db7989077da75b"
+  },
+  "ai_decorate.py": {
+    "bytes": 10845,
+    "sha256": "ab5ba09011b4a5353a2d5849f5208cf20d13122e82c4a4c8153aaa5015962267"
+  },
+  "assets/frame-forge-logo.svg": {
+    "bytes": 916,
+    "sha256": "381effef418a0f1aca895b19e7ffc2a0efb251056668c64db42c67074a5b89e1"
+  },
+  "core_tests.cpp": {
+    "bytes": 1648,
+    "sha256": "c9bbb4af2a7b3ae2417dca0a4fbab15a6053212de703e88ce584e9c33e0d7864"
+  },
+  "main.cpp": {
+    "bytes": 23920,
+    "sha256": "4dd4736c27272bd7c29c9bb6a4db21530cc3c02b5d05e84b9eb3c5fb41fdbcbb"
+  },
+  "mod.json": {
+    "bytes": 3428,
+    "sha256": "29e94aad232c5780efd852020368e5fdc923223a9e43e3fbddba5e69d35afa8a"
+  },
+  "resources/frame-forge-logo.png": {
+    "bytes": 14043,
+    "sha256": "d74185f0a8ead31fa41a29fc3b3249912122ff0cbe598af335cc07532063ab84"
+  },
+  "validation/config-validation.json": {
+    "bytes": 505,
+    "sha256": "9b510d88dfbfe6cca038e3c62fd3325db9b378d430ed2806090058a451d3029e"
+  },
+  "validation/python-validation.json": {
+    "bytes": 736,
+    "sha256": "6c29f77308b8be64219697100018eb2c8624e4bf723feeee4c00f3374d576380"
+  }
+}

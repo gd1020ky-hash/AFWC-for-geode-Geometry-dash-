@@ -1,0 +1,109 @@
+{
+  "geode": "5.11.2",
+  "gd": {
+    "android": "2.2081"
+  },
+  "id": "gdpro67.frame-forge",
+  "name": "Frame Forge",
+  "version": "0.1.0",
+  "developer": "gdpro67",
+  "description": "A branded control deck for practice macros, empirical timing tools, speed/audio controls and procedural level creation.",
+  "settings": {
+    "frame-counter": {
+      "name": "Show engine-tick counter",
+      "type": "bool",
+      "default": true
+    },
+    "click-sounds": {
+      "name": "Input sound effects",
+      "description": "Uses press.ogg and release.ogg in the mod save folder; otherwise click.ogg.",
+      "type": "bool",
+      "default": false
+    },
+    "speed-enabled": {
+      "name": "Enable practice speed control",
+      "description": "Practice Mode only. Does not change normal-mode speed.",
+      "type": "bool",
+      "default": false
+    },
+    "game-speed": {
+      "name": "Game speed multiplier",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.1,
+      "max": 2.0
+    },
+    "music-sync": {
+      "name": "Match music rate to practice speed",
+      "description": "Rate matching, not a pitch-preserving time stretcher or drift corrector. Set Audio speed to 1 for matched timing.",
+      "type": "bool",
+      "default": true
+    },
+    "audio-speed": {
+      "name": "Additional music speed multiplier",
+      "description": "Changes speed AND pitch. Values other than 1 intentionally offset sync.",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.25,
+      "max": 2.0
+    },
+    "replay-file": {
+      "name": "Replay filename (blank = current/latest)",
+      "description": "A .fmacro filename in the mod save folder. No folder paths.",
+      "type": "string",
+      "default": ""
+    },
+    "probe-press": {
+      "name": "Window: player-1 jump press number",
+      "type": "int",
+      "default": 1,
+      "min": 1,
+      "max": 10000
+    },
+    "probe-radius": {
+      "name": "Window: test offsets plus/minus ticks",
+      "description": "Each candidate needs a real retry from the start. Reports sampled survival, not an exact jump window.",
+      "type": "int",
+      "default": 5,
+      "min": 1,
+      "max": 30
+    },
+    "probe-horizon": {
+      "name": "Window: survival horizon after press",
+      "description": "The fixed horizon includes the positive test radius. Record at least this long after the selected press.",
+      "type": "int",
+      "default": 240,
+      "min": 30,
+      "max": 2400
+    },
+    "build-x": {
+      "name": "Generator: starting design X",
+      "description": "Generated objects use native editor paste placement. Actual insertion is relative to your editor view.",
+      "type": "float",
+      "default": 600,
+      "min": 0,
+      "max": 200000
+    },
+    "build-count": {
+      "name": "Generator: layout blocks / glow count",
+      "description": "Layout uses 16..240 blocks. Decorative generation caps this at 200.",
+      "type": "int",
+      "default": 96,
+      "min": 16,
+      "max": 240
+    },
+    "decoration-seed": {
+      "name": "Procedural decoration seed",
+      "description": "Auto decorate generates a repeatable flowing glow composition with rhythmic size accents. This is procedural, not AI. Import AI plan uses the separate local-model helper.",
+      "type": "int",
+      "default": 67,
+      "min": 0,
+      "max": 2147483647
+    }
+  },
+  "resources": {
+    "sprites": [
+      "resources/frame-forge-logo.png"
+    ]
+  }
+}
