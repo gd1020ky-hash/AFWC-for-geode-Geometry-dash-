@@ -1,1 +1,50 @@
-fje
+name: Build Frame Forge for Android
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '*.cpp'
+      - '*.hpp'
+      - '*.py'
+      - 'CMakeLists.txt'
+      - 'mod.json'
+      - '.github/workflows/build.yml'
+permissions:
+  contents: read
+jobs:
+  portable-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run SDK-independent C++ tests
+        run: |
+          g++ -std=c++20 -Wall -Wextra -pedantic -I. core_tests.cpp -o core-tests
+          ./core-tests
+      - name: Run offline AI-plan validator tests
+        run: python3 ai_decorate.py --self-test
+  android:
+    needs: portable-tests
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [Android32, Android64]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with pinned official Geode action and SDK
+        id: build
+        # geode-sdk/build-geode-mod main snapshot, 2026-10-25.
+        uses: geode-sdk/build-geode-mod@a0f7676e6fcd1a584f6d0c1c800239008412defc
+        with:
+          sdk: given
+          target: ${{ matrix.target }}
+          bindings-ref: c49e72063a34ce81b1134f84881e8a3f3cf36c22
+          android-ndk-version: '29.0.14206865'
+          combine: false
+      - name: Save installable package as a downloadable artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frame-forge-${{ matrix.target }}
+          path: ${{ steps.build.outputs.build-output }}
+          if-no-files-found: error
+          retention-days: 14
