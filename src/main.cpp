@@ -393,7 +393,7 @@ class $modify(ForgeGameLayer, GJBaseGameLayer) {
                 g.outcome = m_player1 && !m_player1->m_isDead &&
                     (!m_gameState.m_isDualMode || (m_player2 && !m_player2->m_isDead));
             if (g.mode == Mode::Playback && g.frame >= g.macro.endFrame) {
-                g.mode = Mode::Off; g.status = "Playback ended"; release(play());
+                g.mode = Mode::Off; g.status = "Playback ended"; release();
             }
         }
     }
