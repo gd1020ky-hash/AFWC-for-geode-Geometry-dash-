@@ -1,0 +1,26 @@
+{
+  "manifest_json": "PASS",
+  "referenced_settings": [
+    "audio-speed",
+    "build-count",
+    "build-x",
+    "click-sounds",
+    "decoration-seed",
+    "frame-counter",
+    "game-speed",
+    "music-sync",
+    "probe-horizon",
+    "probe-press",
+    "probe-radius",
+    "replay-file",
+    "speed-enabled"
+  ],
+  "workflow_yaml_parser": "PyYAML 6.0.2",
+  "workflow_yaml": "PASS",
+  "targets": [
+    "Android32",
+    "Android64"
+  ],
+  "portable_tests_prerequisite": "PASS",
+  "android_compiled": false
+}
